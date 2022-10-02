@@ -4,13 +4,13 @@
 66/home/troias/udemy/js-starters/starter/dist/index.f7626f62.css.map1664691848064679200 0
 61/home/troias/udemy/js-starters/starter/dist/logo.726d37a8.png1664689107074679200 0
 61/home/troias/udemy/js-starters/starter/dist/index.62406edb.js1664689107074679200 0
-65/home/troias/udemy/js-starters/starter/dist/index.e5e34112.js.map1664695323084679200 0
-61/home/troias/udemy/js-starters/starter/dist/index.e5e34112.js1664695323084679200 0
+65/home/troias/udemy/js-starters/starter/dist/index.e5e34112.js.map1664697769554679200 0
+61/home/troias/udemy/js-starters/starter/dist/index.e5e34112.js1664697769554679200 0
 64/home/troias/udemy/js-starters/starter/dist/favicon.8b2f57bf.png1664691848064679200 0
 55/home/troias/udemy/js-starters/starter/src/img/logo.png1664689210804679200 0
 58/home/troias/udemy/js-starters/starter/src/img/favicon.png1664689210754679200 0
 46/home/troias/udemy/js-starters/starter/src/img1664689210774679200 1
-59/home/troias/udemy/js-starters/starter/src/js/controller.ts1664695322824679200 0
+59/home/troias/udemy/js-starters/starter/src/js/controller.ts1664697769494679200 0
 45/home/troias/udemy/js-starters/starter/src/js1664692436704679200 1
 60/home/troias/udemy/js-starters/starter/src/sass/_recipe.scss1664689210894679200 0
 64/home/troias/udemy/js-starters/starter/src/sass/_components.scss1664689210864679200 0
@@ -3396,7 +3396,7 @@
 93/home/troias/udemy/js-starters/starter/node_modules/@parcel/namer-default/lib/DefaultNamer.js1664689107394679200 0
 89/home/troias/udemy/js-starters/starter/node_modules/@parcel/runtime-js/src/helpers/worker1664689107604679200 1
 102/home/troias/udemy/js-starters/starter/node_modules/@parcel/runtime-js/src/helpers/worker/js-loader.js1664689107604679200 0
-43/home/troias/udemy/js-starters/starter/dist1664695323094679200 1
+43/home/troias/udemy/js-starters/starter/dist1664697769554679200 1
 86/home/troias/udemy/js-starters/starter/node_modules/@parcel/optimizer-css/package.json1664689107454679200 0
 78/home/troias/udemy/js-starters/starter/node_modules/source-map/source-map.d.ts1664689200684679200 0
 104/home/troias/udemy/js-starters/starter/node_modules/@parcel/runtime-js/src/helpers/worker/wasm-loader.js1664689107604679200 0

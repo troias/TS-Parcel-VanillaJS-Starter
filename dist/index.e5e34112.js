@@ -1,12 +1,17 @@
 const localNodeServer = "http://localhost:3000";
 const sendReqtoServer = async (url, method, body)=>{
+    const checkBody = ()=>{
+        if (method === "POST") return JSON.stringify(body);
+        else return null;
+    };
     const res = await fetch(url, {
         method: method,
         headers: {
             "Content-Type": "application/json",
-            "no-cors": "true"
+            "no-cors": "true",
+            cors: "false"
         },
-        body: JSON.stringify(body)
+        body: checkBody()
     });
     return res.json();
 };
@@ -18,17 +23,26 @@ const sendReq = async ()=>{
     });
     fetchResult.innerHTML = res.message;
 };
-const sendMessage = async (message)=>{
-    const res = await sendReqtoServer(`${localNodeServer}/message`, "POST", {
-        message: message
-    });
-    console.log(res);
+const sendGetReq = async ()=>{
+    const res = await sendReqtoServer(localNodeServer, "GET", {});
     fetchResult.innerHTML = res.message;
 };
+const fetchPageHtml = async ()=>{
+    const res = await sendReqtoServer(localNodeServer, "GET", {});
+    // fetchResult.innerHTML = res.message;
+    console.log(res);
+};
+// const sendMessage = async (message: string) => {
+//   const res = await sendReqtoServer(`${localNodeServer}/message`, 'POST', {
+//     message: message,
+//   });
+//   console.log(res);
+//   fetchResult.innerHTML = res.message;
+// };
 const clickCheck = ()=>{
     return console.log("clicked");
 };
 // btn.addEventListener('click', sendMessage('yooo') as any);
-btn.addEventListener("click", sendReq);
+btn.addEventListener("click", fetchPageHtml);
 
 //# sourceMappingURL=index.e5e34112.js.map
