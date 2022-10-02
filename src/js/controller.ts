@@ -1,25 +1,38 @@
-const recipeContainer = document.querySelector('.recipe');
+const localNodeServer = 'http://localhost:3000';
 
-const timeout = function (s: number) {
-  return new Promise(function (_, reject) {
-    setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout after ${s} second`));
-    }, s * 1000);
+const sendReqtoServer = async (url: string, method: string, body: any) => {
+  const res = await fetch(url, {
+    method: method,
+
+    headers: {
+      'Content-Type': 'application/json',
+      'no-cors': 'true',
+    },
+    body: JSON.stringify(body),
   });
+  return res.json();
 };
 
-// https://forkify-api.herokuapp.com/v2
+const btn = document.querySelector('button')!;
+const fetchResult = document.querySelector('#fetch-result')!;
 
-///////////////////////////////////////
-
-const recipeApi = 'https://forkify-api.herokuapp.com/api/v2/recipes';
-
-export const getSingleRecipe = async (id: number) => {
-  const req = await fetch(`${recipeApi}/${id}`);
-  const data = await req.json();
-
-  if (!req.ok) throw new Error(`${data.message} (${req.status})`);
-
-  const { recipe } = data.data;
-  return recipe;
+const sendReq = async () => {
+  const res = await sendReqtoServer(localNodeServer, 'POST', { name: 'max' });
+  fetchResult.innerHTML = res.message;
 };
+
+const sendMessage = async (message: string) => {
+  const res = await sendReqtoServer(`${localNodeServer}/message`, 'POST', {
+    message: message,
+  });
+  console.log(res);
+
+  fetchResult.innerHTML = res.message;
+};
+
+const clickCheck = () => {
+  return console.log('clicked');
+};
+
+// btn.addEventListener('click', sendMessage('yooo') as any);
+btn.addEventListener('click', sendReq as any);
