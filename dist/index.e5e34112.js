@@ -29,7 +29,7 @@ const sendGetReq = async ()=>{
 };
 const fetchPageHtml = async ()=>{
     const res = await sendReqtoServer(localNodeServer, "GET", {});
-    // fetchResult.innerHTML = res.message;
+    fetchResult.innerHTML = res.message;
     console.log(res);
 };
 // const sendMessage = async (message: string) => {
