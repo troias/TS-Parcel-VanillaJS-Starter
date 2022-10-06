@@ -543,6 +543,35 @@ const clickCheck = ()=>{
 };
 // btn.addEventListener('click', sendMessage('yooo') as any);
 btn.addEventListener("click", apiUtil.sendReq);
+const countDownRecursiveReturnArr = (num)=>{
+    if (num === 0) return [];
+    return [
+        num,
+        ...countDownRecursiveReturnArr(num - 1)
+    ];
+};
+countDownRecursiveReturnArr(5);
+const displayRecrsuriveArrtodom = (arr)=>{
+    const ul = document.querySelector("ul");
+    arr.forEach((num)=>{
+        const li = document.createElement("li");
+        li.textContent = num.toString();
+        ul.appendChild(li);
+    });
+};
+const returnRecursiveArrFromStartToEnd = (start, end)=>{
+    if (start === end) return [
+        start
+    ];
+    else if (start > end) return [
+        start,
+        ...returnRecursiveArrFromStartToEnd(start - 1, end)
+    ];
+    return [
+        start,
+        ...returnRecursiveArrFromStartToEnd(start + 1, end)
+    ];
+};
 
 },{"../../lib/api/utils/api-utils":"jxTIw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jxTIw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
